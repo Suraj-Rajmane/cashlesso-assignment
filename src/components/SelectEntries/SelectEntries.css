@@ -1,0 +1,19 @@
+.select-entries {
+    width: 95%;
+    height: 8%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: lightblue;
+}
+
+.text {
+    color: black;
+    padding: 10px;
+}
+
+#select {
+    width: 5%;
+    height: 30px;
+}

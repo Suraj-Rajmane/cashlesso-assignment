@@ -1,0 +1,22 @@
+.pagination {
+    width: 95%;
+    height: 50px;
+    
+    margin: 10px auto;
+    background-color: white;
+}
+
+.flex-button-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button {
+    width: 70px;
+    height: 30px;
+    margin-left:5px ;
+}

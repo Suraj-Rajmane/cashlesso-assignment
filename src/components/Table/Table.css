@@ -1,0 +1,10 @@
+.table-data {
+    width: 95%;
+    margin: 2px auto;
+    background-color: gray;
+}
+
+#first-row {
+    height: 40px;
+    color: chartreuse;
+}
