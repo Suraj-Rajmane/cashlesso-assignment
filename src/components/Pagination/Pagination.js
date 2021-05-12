@@ -28,16 +28,11 @@ const Pagination = ({ dataArray, entries, pageNumber, setData, setPageNumber}) =
             <button disabled={pageNumber === 1} onClick={handlePrevious}>
                 Previous
             </button>
-            <button
-                disabled={pageNumber === Math.ceil(dataArray.length / entries)}
-                onClick={handleNext}
-            >
-                Next
-            </button>
+            
             <>
                 {pageNumberArray.map((item, index) => (
                     <button key={index} onClick={() => {
-                        setPageNumber(item)
+                        setPageNumber(item);
                         const paginatedData = (page, limit) => {
                             const startIndex = (page - 1) * limit;
                             const endIndex = startIndex + limit;
@@ -47,11 +42,17 @@ const Pagination = ({ dataArray, entries, pageNumber, setData, setPageNumber}) =
                           const paginatedDataArray = paginatedData(pageNumber, entries);
                 
                           setData(paginatedDataArray);
-                    }}>
+                        }}>
                         {item}
                     </button>
                 ))}
             </>
+            <button
+                disabled={pageNumber === Math.ceil(dataArray.length / entries)}
+                onClick={handleNext}
+            >
+                Next
+            </button>
             </div>
             
         </div>

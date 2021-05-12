@@ -13,7 +13,7 @@ const Main = () => {
     const [tempName, setTempName] = useState("");
     const [tempType, setTempType] = useState("default");
     const [status, setStatus] = useState("default");
-    const [entries, setEntries] = useState("2");
+    const [entries, setEntries] = useState("4");
     const [pageNumber, setPageNumber] = useState(1);
 
     const handleStatusChange = index => {
