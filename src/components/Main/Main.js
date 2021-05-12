@@ -52,6 +52,11 @@ const Main = () => {
     }
 
     const addData = () => {
+
+        if(tempID === "" || tempName === "" || tempType === "default" || status === "default") {
+            return;
+        }
+
         const newObj = {
             id: tempID,
             name: tempName,
