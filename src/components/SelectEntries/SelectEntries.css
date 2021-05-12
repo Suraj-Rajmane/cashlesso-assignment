@@ -17,3 +17,27 @@
     width: 5%;
     height: 30px;
 }
+
+@media screen and (max-width:1500px) {
+    #select {
+        width: 7%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #select {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #select {
+        width: 12%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #select {
+        width: 15%;
+    }
+}
