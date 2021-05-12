@@ -15,7 +15,20 @@ const Main = () => {
     const [status, setStatus] = useState("default");
     const [entries, setEntries] = useState("2");
     const [pageNumber, setPageNumber] = useState(1);
-    const [isToggled, setIsToggled] = useState(false);
+
+    const handleStatusChange = index => {
+
+        const updatedData = data.map((item, i) => {
+            if(i === index) {
+                item.isToggled = item.isToggled ? false : true;
+                item.status = item.status === "Active" ? "Inactive" : "Active";
+            }
+            return item;
+        });
+        
+        setData(updatedData);
+    }
+    
 
     const renderRows = () => {
         return data.map((entry, index) => 
@@ -26,7 +39,7 @@ const Main = () => {
             <td className="text-data">{entry.date}</td>
             <td className="text-data">{entry.status}</td>
             <td className="text-data">
-                <Switch isToggled={isToggled} onToggle={() => setIsToggled(!isToggled)}/>
+                <Switch isToggled={entry.isToggled} onToggle={() => handleStatusChange(index)}/>
             </td>
         </tr>)
             
@@ -44,7 +57,8 @@ const Main = () => {
             name: tempName,
             type: tempType,
             date: "15-07-2010",
-            status: status
+            status: status,
+            isToggled: false
         }
 
         const updatedData = [...data, newObj];

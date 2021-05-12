@@ -4,7 +4,8 @@ const initialData = [
         name: "Lorel Ipsum",
         type: "Email",
         date: "15-07-2010",
-        status: "Active"
+        status: "Active",
+        isToggled: false
     },
 
     {
@@ -12,7 +13,8 @@ const initialData = [
         name: "Lorel Ipsum",
         type: "SMS",
         date: "23-01-2012",
-        status: "Active"
+        status: "Active",
+        isToggled: false
     },
 
     {
@@ -20,7 +22,8 @@ const initialData = [
         name: "Lorel Ipsum",
         type: "Email",
         date: "15-05-2015",
-        status: "Active"
+        status: "Active",
+        isToggled: false
     },
 
     {
@@ -28,7 +31,8 @@ const initialData = [
         name: "Lorel Ipsum",
         type: "SMS",
         date: "18-07-2008",
-        status: "Active"
+        status: "Active",
+        isToggled: false
     },
 
 ];
