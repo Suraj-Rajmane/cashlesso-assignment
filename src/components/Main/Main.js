@@ -57,11 +57,22 @@ const Main = () => {
             return;
         }
 
+        let date = new Date();
+        let year = date.getFullYear();
+        let month = date.getMonth() + 1;
+
+        if(month <= 9) {
+            month = "0" + month;
+        }
+        let day = date.getDate();
+
+        let currentDate = `${day}-${month}-${year}`;
+
         const newObj = {
             id: tempID,
             name: tempName,
             type: tempType,
-            date: "15-07-2010",
+            date: currentDate,
             status: status,
             isToggled: false
         }
