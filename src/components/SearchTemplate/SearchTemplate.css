@@ -14,7 +14,7 @@
 .flex-item {
     width: 30%;
     height: 10%;
-    padding: 5px;
+    padding: 7px;
 }
 
 .text {
@@ -31,6 +31,11 @@
     color: #3a1040;
     padding-top: 5px;
     padding-left: 10px;
+}
+
+#error {
+    text-align: center;
+    color: red;
 }
 
 #button-section {
@@ -60,6 +65,6 @@
 
 @media screen and (max-width: 600px) {
     .flex-item {
-        width: 40%;
+        width: 38%;
     }
 }

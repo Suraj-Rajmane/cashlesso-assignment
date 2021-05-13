@@ -15,6 +15,7 @@ const Main = () => {
     const [status, setStatus] = useState("default");
     const [entries, setEntries] = useState("4");
     const [pageNumber, setPageNumber] = useState(1);
+    const [error, setError] = useState("");
 
     const handleStatusChange = index => {
 
@@ -49,11 +50,13 @@ const Main = () => {
         setData(initialData);
         setTempID("");
         setTempName("");
+        setError("");
     }
 
     const addData = () => {
 
         if(tempID === "" || tempName === "" || tempType === "default" || status === "default") {
+            setError("All fields are manadatory");
             return;
         }
 
@@ -79,12 +82,16 @@ const Main = () => {
 
         const updatedData = [...data, newObj];
 
+        setTempID("");
+        setTempName("");
+
         setData(updatedData);
+        
     }
 
     return (
         <div className="main">
-            <SearchTemplate setTempType={setTempType} setStatus={setStatus} tempID={tempID} tempName={tempName} setTempID={setTempID} setTempName={setTempName} resetData={resetData} addData={addData}/>
+            <SearchTemplate setTempType={setTempType} setStatus={setStatus} tempID={tempID} tempName={tempName} setTempID={setTempID} setTempName={setTempName} resetData={resetData} addData={addData} error={error}/>
             <SelectEntries setEntries={setEntries}/>
             <Table renderRows={renderRows}/>
             <Pagination dataArray={data} entries={entries} pageNumber={pageNumber} setData={setData} setPageNumber={setPageNumber}/>

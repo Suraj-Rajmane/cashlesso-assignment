@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SearchTemplate.css';
 
-const SearchTemplate = ({ tempID, tempName, setTempID, setTempName, setTempType, setStatus, resetData, addData}) => {
+const SearchTemplate = ({ tempID, tempName, setTempID, setTempName, setTempType, setStatus, resetData, addData, error}) => {
 
     
 
     return (
         <div className="search-template" >
             <h2 id="heading">Search Templates</h2>
+            <div id="error">{error}</div>
             <div className="flex-container">
                 <div className="flex-item">
                     <p className="text">Template ID</p>
