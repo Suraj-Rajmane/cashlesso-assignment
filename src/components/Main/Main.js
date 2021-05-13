@@ -84,7 +84,7 @@ const Main = () => {
 
         setTempID("");
         setTempName("");
-
+        setError("");
         setData(updatedData);
         
     }
